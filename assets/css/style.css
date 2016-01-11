@@ -1,0 +1,45 @@
+.valign-center{
+    vertical-align:middle !important;
+}
+
+.table-line-center  td, .table-line-center th{
+    text-align: center !important;
+}
+
+.table-line-left  td, .table-line-left th{
+    text-align: left !important;
+}
+
+.table-line-right td, .table-line-right th{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.margin-top-10{
+    margin-top: 10px;
+}
+
+.margin-top-20{
+    margin-top: 20px;
+}
+
+.margin-top-30{
+    margin-top: 30px;
+}
+
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30{
+    margin-bottom: 30px;
+}
+
+.ng-cloak{display:none !important}

@@ -1,0 +1,272 @@
+<!doctype html>
+<html ng-app="toolApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Pessoa Jurídica X CLT X Autonômo</title>
+    <link rel="stylesheet" href="assets/built/built.css">
+</head>
+<body ng-cloak>
+    <div class="container-fluid" ng-controller="toolCtrl">
+        <div class="row text-center">
+            <h1>CUSTO DE CONTRATAÇÃO</h1>
+        </div>
+        <div class="row margin-bottom-30 margin-top-30 text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="monthly-payment">Valor a pagar mensal:</label>
+                        <input type="text" ng-model="monthlyPayment" class="form-control" id="monthly-payment" money="{prefix:'R$ ', thousands:'.', decimal:','}">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 table-responsive">
+            <table class="table table-bordered">
+            <thead>
+                <tr class="table-line-center">
+                    <th rowspan="2" class="valign-center" valign="middle">Custo Contratante</th>
+                    <th colspan="2">LP/LR VIA CLT</th>
+                    <th colspan="2">Simples CLT</th>
+                    <th colspan="2">Autônomo</th>
+                    <th colspan="2">Contratado PJ LP/LR</th>
+                    <th colspan="2">Contratado PJ Simples</th>
+                    <th colspan="2">Contratado PJ MEI</th>
+                </tr>
+                <tr class="table-line-center">
+                    <!-- LP/LR VIA CLT -->
+                    <th>%</th>
+                    <th>Valor</th>
+
+                    <!-- Simples CLT -->
+                    <th>%</th>
+                    <th>Valor</th>
+
+                    <!-- Autônomo -->
+                    <th>%</th>
+                    <th>Valor</th>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <th>% </th>
+                    <th>Valor </th>
+
+                    <!-- Contratado PJ Simples -->
+                    <th>% </th>
+                    <th>Valor </th>
+
+                    <!-- PJ MEI -->
+                    <th>% </th>
+                    <th>Valor </th>
+                </tr>
+                <!-- Remuneração -->
+                <tr class="table-line-right">
+                    <!-- Itens -->
+                    <td style="text-align: left !important;">Remuneração</td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>100%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>100%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- Autônomo -->
+                    <td>100%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>100%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>100%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- PJ MEI -->
+                    <td>100%</td>
+                    <td>{{monthlyPayment}}</td>
+                </tr>
+                <!-- INSS empregador -->
+                <tr class="table-line-right">
+                    <!-- Itens -->
+                    <td style="text-align: left !important;">INSS empregador</td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>28%</td>
+                    <td>{{contractorINSSC1 | currency:'R$ '}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>0%</td>
+                    <td>{{contractorINSSC2 | currency:'R$ '}}</td>
+
+                    <!-- Autônomo -->
+                    <td>20%</td>
+                    <td>{{contractorINSSC3 | currency:'R$ '}}</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- PJ MEI -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+                </tr>
+                <!-- FGTS -->
+                <tr class="table-line-right">
+                    <!-- Itens -->
+                    <td style="text-align: left !important;">FGTS</td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>8%</td>
+                    <td>{{contractorFGTSC1 | currency:'R$ '}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>8%</td>
+                    <td>{{contractorFGTSC2 | currency:'R$ '}}</td>
+
+                    <!-- Autônomo -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- PJ MEI -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+                </tr>
+                <!-- 13º Salário + Encargos FGTS e INSS -->
+                <tr class="table-line-right">
+                    <!-- Itens -->
+                    <td style="text-align: left !important;">13º Salário + Encargos FGTS e INSS</td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>11,33%</td>
+                    <td>{{contractorSalary13C1 | currency:'R$ '}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>9%</td>
+                    <td>{{contractorSalary13C2 | currency:'R$ '}}</td>
+
+                    <!-- Autônomo -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- PJ MEI -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+                </tr>
+                <!-- Férias + 1/3 + Encargos FGTS e INSS -->
+                <tr class="table-line-right">
+                    <!-- Itens -->
+                    <td style="text-align: left !important;">Férias + 1/3 + Encargos FGTS e INSS</td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>15,07%</td>
+                    <td>{{contractorVocationsC1 | currency:'R$ '}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>11,97%</td>
+                    <td>{{contractorVocationsC2 | currency:'R$ '}}</td>
+
+                    <!-- Autônomo -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- PJ MEI -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+                </tr>
+                <!-- Provisão Multa FGTS (Caso Demissão) -->
+                <tr class="table-line-right">
+                    <!-- Itens -->
+                    <td style="text-align: left !important;">Provisão Multa FGTS (Caso Demissão)</td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>40%</td>
+                    <td>{{contractorResignationC1 | currency:'R$ '}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>40%</td>
+                    <td>{{contractorResignationC2 | currency:'R$ '}}</td>
+
+                    <!-- Autônomo -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+
+                    <!-- PJ MEI -->
+                    <td>0%</td>
+                    <td>R$ 0,00</td>
+                </tr>
+
+                <!-- Custo do total do Contratante -->
+                <tr class="table-line-right danger">
+                    <!-- Itens -->
+                    <td class="text-uppercase " style="text-align: left !important;"><b>Custo do total do Contratante</b></td>
+
+                    <!-- LP/LR VIA CLT -->
+                    <td>66%</td>
+                    <td>{{contractorTotalC1 | currency:'R$ '}}</td>
+
+                    <!-- Simples CLT -->
+                    <td>32%</td>
+                    <td>{{contractorTotalC2 | currency:'R$ '}}</td>
+
+                    <!-- Autônomo -->
+                    <td>20%</td>
+                    <td>{{contractorTotalC3 | currency:'R$ '}}</td>
+
+                    <!-- Contratado PJ LP/LR -->
+                    <td>0%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- Contratado PJ Simples -->
+                    <td>0%</td>
+                    <td>{{monthlyPayment}}</td>
+
+                    <!-- PJ MEI -->
+                    <td>0%</td>
+                    <td>{{monthlyPayment}}</td>
+                </tr>
+            </thead>
+            </table>
+        </div>
+        </div>
+    </div>
+<script type="text/javascript" src="assets/built/built.js"></script>
+</body>
+</html>

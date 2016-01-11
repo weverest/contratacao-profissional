@@ -1,0 +1,28 @@
+{
+  "name": "pj-clt",
+  "directory": "assets/components",
+  "authors": [
+    "Diogo Brito <diogo@weverest.com.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/weverest/contratacao-profissional",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8"
+  },
+  "dependencies": {
+    "angular-input-mask": "~0.0.6",
+    "jquery-maskmoney": "https://github.com/plentz/jquery-maskmoney.git#~3.0.2",
+    "angular-i18n": "~1.4.8"
+  }
+}

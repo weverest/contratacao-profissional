@@ -1,0 +1,36 @@
+{
+  "name": "angular-input-mask",
+  "version": "0.0.6",
+  "main": "./src/angular-simple-mask.js",
+  "dependencies": {
+    "angular": "^1.0.8"
+  },
+  "homepage": "https://github.com/wender/angular-simple-input-mask",
+  "authors": [
+    "Wender Lima <wender.lima@gmail.com>"
+  ],
+  "description": "Way simple Angular directive to apply mask to input fields also with dynamic/multiple masks to the same field, which means that you can have different masks for different lengths of numbers",
+  "keywords": [
+    "AngularJS",
+    "Mask",
+    "Directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.6",
+    "commit": "2386307f618a0e24683ff9f81c9ba0621a76b348"
+  },
+  "_source": "git://github.com/wender/angular-simple-input-mask.git",
+  "_target": "~0.0.6",
+  "_originalSource": "angular-input-mask",
+  "_direct": true
+}
