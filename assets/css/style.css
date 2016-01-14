@@ -43,3 +43,7 @@
 }
 
 .ng-cloak{display:none !important}
+
+.table {
+    font-size: 12px !important;
+}
